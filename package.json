@@ -1,0 +1,24 @@
+{
+  "name": "etch-a-sketch",
+  "version": "1.0.0",
+  "description": "Vanilla JavaScript Etch-a-Sketch Project",
+  "main": "etch-a-sketch.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andrewtjong/etch-a-sketch.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/andrewtjong/etch-a-sketch/issues"
+  },
+  "homepage": "https://github.com/andrewtjong/etch-a-sketch#readme",
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.24.2"
+  }
+}
