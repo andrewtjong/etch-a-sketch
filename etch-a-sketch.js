@@ -4,9 +4,9 @@ const canvas = document.querySelector("#etch-a-sketch");
 
 const ctx = canvas.getContext("2d");
 const shakebutton = document.querySelector(".shake");
-const MOVE_AMOUNT = 60;
+const MOVE_AMOUNT = 50;
 
-let hue = 0;
+let hue = Math.random() * 360;
 ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
 
 // Setup canvas for drawing
@@ -30,8 +30,8 @@ ctx.stroke();
 // Write a draw function
 function draw({ key }) {
   // increment the hue
-  hue += 1;
-  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+  hue += 10;
+  ctx.strokeStyle = `hsl(${Math.random() * 360}, 100%, 50%)`;
   console.log(ctx.strokeStyle);
   console.log(hue);
   // start the path
