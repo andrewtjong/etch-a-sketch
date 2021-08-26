@@ -9,3 +9,11 @@ const shakebutton = document.querySelector('.shake');
 ctx.lineJoin = 'round';
 ctx.lineCap = 'round';
 ctx.lineWidth = 10;
+
+// Write a draw function
+
+// write a handler for the keys
+
+// clear / shake function
+
+// listen for arrow keys
