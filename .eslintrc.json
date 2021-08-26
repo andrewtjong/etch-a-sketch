@@ -11,5 +11,20 @@
         "ecmaVersion": 12
     },
     "rules": {
+        "no-console": "off",
+        "quotes": [
+           "error",
+           "double"
+         ],
+        "prettier/prettier": [
+            "error",
+            {
+                "trailingComma": "es5",
+                "singleQuote": false,
+                "printWidth": 120,
+                "tabWidth": 8
+            },
+            
+        ]
     }
 }
