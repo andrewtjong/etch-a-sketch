@@ -6,6 +6,9 @@ const ctx = canvas.getContext("2d");
 const shakebutton = document.querySelector(".shake");
 const MOVE_AMOUNT = 60;
 
+let hue = 0;
+ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+
 // Setup canvas for drawing
 // make a variable called height and width from the same properties on our canvas.
 const { width, height } = canvas;
@@ -26,7 +29,11 @@ ctx.stroke();
 
 // Write a draw function
 function draw({ key }) {
-  console.log(key);
+  // increment the hue
+  hue += 1;
+  ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+  console.log(ctx.strokeStyle);
+  console.log(hue);
   // start the path
   ctx.beginPath();
   ctx.moveTo(x, y);
