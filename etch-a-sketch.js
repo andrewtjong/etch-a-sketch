@@ -4,6 +4,7 @@ const canvas = document.querySelector("#etch-a-sketch");
 
 const ctx = canvas.getContext("2d");
 const shakebutton = document.querySelector(".shake");
+const MOVE_AMOUNT = 60;
 
 // Setup canvas for drawing
 // make a variable called height and width from the same properties on our canvas.
@@ -13,7 +14,7 @@ const { width, height } = canvas;
 
 ctx.lineJoin = "round";
 ctx.lineCap = "round";
-ctx.lineWidth = 10;
+ctx.lineWidth = MOVE_AMOUNT;
 
 ctx.beginPath(); // start the drawing
 let x = Math.floor(Math.random() * width);
@@ -30,8 +31,22 @@ function draw({ key }) {
   ctx.beginPath();
   ctx.moveTo(x, y);
   // move our x and y values depending on what the user did
-  x -= 10;
-  y -= 10;
+  switch (key) {
+    case "ArrowUp":
+      y -= MOVE_AMOUNT;
+      break;
+    case "ArrowRight":
+      x += MOVE_AMOUNT;
+      break;
+    case "ArrowDown":
+      y += MOVE_AMOUNT;
+      break;
+    case "ArrowLeft":
+      x -= MOVE_AMOUNT;
+      break;
+    default:
+      break;
+  }
   ctx.lineTo(x, y);
   ctx.stroke();
 }
